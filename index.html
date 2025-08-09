@@ -1,1 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi CV</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+
+    .header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 20px;
+    }
+
+    .header-info {
+      flex: 1;
+    }
+
+    .header-info h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    .header-info h2 {
+      margin: 5px 0 0;
+      font-weight: normal;
+      color: #777;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      color: #005b96;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    .project, .job {
+      margin-bottom: 15px;
+    }
+
+    .job-title, .project-title {
+      font-weight: bold;
+    }
+
+    .company {
+      font-style: italic;
+      color: #555;
+    }
+
+    .tech {
+      display: inline-block;
+      background: #eee;
+      padding: 5px 10px;
+      margin: 5px;
+      border-radius: 4px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header con foto, nombre y profesión -->
+    <div class="header">
+      <img src="foto.jpg" alt="Tu foto" />
+      <div class="header-info">
+        <h1>Nasly Vanesa Valencia Salamanca</h1>
+        <h2>Estudiante Ingenieria de sistemas</h2>
+      </div>
+    </div>
+
+    <!-- Sobre ti -->
+    <section>
+      <h3>Resumen Profesional</h3>
+      <p>
+        Breve descripción de tu experiencia, enfoque profesional, especialidades y lo que te hace destacar.
+      </p>
+    </section>
+
+    <!-- Tecnologías -->
+    <section>
+      <h3>Tecnologías que manejo</h3>
+      <div>
+        <span class="tech">HTML</span>
+        <span class="tech">CSS</span>
+        <span class="tech">JavaScript</span>
+        <span class="tech">React</span>
+        <span class="tech">Node.js</span>
+        <!-- Agrega más según necesites -->
+      </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section>
+      <h3>Habilidades</h3>
+      <ul>
+        <li>Trabajo en equipo</li>
+        <li>Resolución de problemas</li>
+        <li>Comunicación efectiva</li>
+        <li>Gestión del tiempo</li>
+        <!-- Agrega más -->
+      </ul>
+    </section>
+
+    <!-- Proyectos -->
+    <section>
+      <h3>Proyectos destacados</h3>
+      <div class="project">
+        <p class="project-title">Nombre del Proyecto</p>
+        <p>Descripción breve del proyecto, tecnologías utilizadas, tu rol, etc.</p>
+      </div>
+      <!-- Puedes duplicar este bloque para más proyectos -->
+    </section>
+
+    <!-- Experiencia Laboral -->
+    <section>
+      <h3>Experiencia laboral</h3>
+      <div class="job">
+        <p class="job-title">Administradora de red - <span class="company">ICESI</span></p>
+        <p><strong>Logros:</strong></p>
+        <ul>
+          <li>Logro o responsabilidad destacada 1</li>
+          <li>Logro o responsabilidad destacada 2</li>
+        </ul>
+      </div>
+      <!-- Puedes duplicar este bloque para más experiencias -->
+    </section>
+
+  </div>
+</body>
+</html>
 
