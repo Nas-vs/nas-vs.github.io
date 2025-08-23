@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mi CV</title>
+  <title>CV Nas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+      height: 100%;
+      background: linear-gradient(135deg, #67cfbc 0%, #ACB6E5 100%);
       margin: 0;
       padding: 0;
       color: #222;
@@ -41,12 +44,13 @@
       transition: transform 0.3s ease;
     }
     .header img:hover {
-      transform: scale(1.05);
+      transform: scale(3.2) translateY(30px) translatex(30px);
     }
 
     .header-info h1 {
       margin: 0;
       font-size: 36px;
+      font-weight: bold;
       color: #2c3e50;
     }
 
@@ -58,7 +62,7 @@
       letter-spacing: 1px;
     }
 
-    section {
+      section {
       margin-bottom: 35px;
     }
 
@@ -66,6 +70,7 @@
       margin-bottom: 15px;
       color: #4a90e2;
       font-size: 24px;
+      font-weight: bold;
       border-bottom: 2px solid #4a90e2;
       padding-bottom: 6px;
       width: fit-content;
@@ -96,7 +101,7 @@
       cursor: default;
     }
     .tech:hover {
-      background-color: #357ABD;
+      background-color: #4a90e2;
     }
 
     .project, .job {
@@ -143,61 +148,106 @@
 
     <!-- Sobre ti -->
     <section>
-      <h3>Resumen Profesional</h3>
+      <h3>🌟 Resumen Profesional</h3>
       <p>
-        Breve descripción de tu experiencia, enfoque profesional, especialidades y lo que te hace destacar.
+        Estudiante de Ingeniería de Sistemas en séptimo semestre y tecnóloga en redes de datos con más de 3 años de experiencia como Sysadmin. Apasionada por la tecnología, con sólida experiencia en administración de sistemas Linux y Windows, configuración y gestión de dispositivos de red (routers, switches, firewalls), y manejo de herramientas de monitoreo. Familiarizada con plataformas cloud (AWS, Azure), servicios como Mail365 y Active Directory, contenedores Docker y automatización de procesos.
       </p>
+    </section>
+
+    <!-- Contacto -->
+    <section>
+      <h3> 📧 Contacto</h3>
+      <p><i class="fa-solid fa-envelope"></i> <a href="mailto:tuemail@example.com">naslyvalencia@gmail.com</a></p>
+      <p><i class="fas fa-phone"></i> <a href="tel:+1234567890">+57 3234860000</a></p>
+      <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/tuusuario" target="_blank">LinkedIn</a></p>
+      <p><i class="fa-solid fa-location-dot"></i> <a href="https://linkedin.com/in/tuusuario" target="_blank">Cali, Colombia</a></p>
     </section>
 
     <!-- Tecnologías -->
     <section>
-      <h3>Tecnologías que manejo</h3>
+      <h3>💻 Competencias técnicas</h3>
       <div>
-        <span class="tech">HTML</span>
-        <span class="tech">CSS</span>
-        <span class="tech">JavaScript</span>
-        <span class="tech">React</span>
-        <span class="tech">Node.js</span>
-        <!-- Agrega más según necesites -->
-      </div>
+        <span class="tech">Linux</span>
+        <span class="tech">Windows</span>
+        <span class="tech">Docker</span>
+        <span class="tech">Aws</span>
+        <span class="tech">Python</span>
+     
     </section>
 
     <!-- Habilidades -->
     <section>
-      <h3>Habilidades</h3>
-      <ul>
-        <li>Trabajo en equipo</li>
-        <li>Resolución de problemas</li>
-        <li>Comunicación efectiva</li>
-        <li>Gestión del tiempo</li>
-        <!-- Agrega más -->
+      <h3>💡 Competencias profesionales</h3>
+      <ul id="habilidades-list">
+        <li>Cloud: AWS (EC2, S3, IAM), Azure,etc)</li>
+        <li>DevOps Tools: Docker, Ansible, Git</li>
+        <li>Monitoring: Zabbix, Prometheus, Grafana, Nagios</l>
       </ul>
-    </section>
-
-    <!-- Proyectos -->
-    <section>
-      <h3>Proyectos destacados</h3>
-      <div class="project">
-        <p class="project-title">Nombre del Proyecto</p>
-        <p>Descripción breve del proyecto, tecnologías utilizadas, tu rol, etc.</p>
+      <div class="mt-2 flex gap-2">
+        <input id="nuevo-habilidad" type="text" placeholder="Agregar habilidad" class="border rounded px-3 py-1 flex-grow" />
+        <button onclick="agregarItem('habilidades')" class="bg-blue-600 text-white px-4 py-1 rounded hover:bg-blue-700">Añadir</button>
       </div>
-      <!-- Puedes duplicar este bloque para más proyectos -->
     </section>
 
     <!-- Experiencia Laboral -->
-    <section>
-      <h3>Experiencia laboral</h3>
-      <div class="job">
-        <p class="job-title">Puesto - <span class="company">Nombre de la Empresa</span></p>
-        <p><strong>Logros:</strong></p>
-        <ul>
-          <li>Logro o responsabilidad destacada 1</li>
-          <li>Logro o responsabilidad destacada 2</li>
-        </ul>
+    <section> 
+      <h3>💼 Experiencia laboral</h3>
+      <div id="experiencia-list">
+        <div class="job">
+          <p class="job-title">Administradora de Red - <span class="company">Icesi</span></p>
+          <p><strong>Logros:</strong></p>
+          <ul>
+            <li>Configuración e instalación de 270 APs para renovación de red inalámbrica</li>
+            <li>Configuración e instalación de 96 switches para renovación de red LAN</li>
+          </ul>
+        </div>
+       <h3>💼 Experiencia laboral</h3>
+      <div id="experiencia-list">
+        <div class="job">
+          <p class="job-title">Administradora de sistemas - <span class="company">CIDEIM</span></p>
+          <p><strong>Logros:</strong></p>
+          <ul>
+            <li>Optimización y actualización de sistemas</li>
+            <li>Desarrollo de aplicación para registro de huellas con Java y Docker</li>
+          </ul>
+        </div>
       </div>
-      <!-- Puedes duplicar este bloque para más experiencias -->
+      <div class="mt-2 flex gap-2">
+        <input id="nueva-experiencia" type="text" placeholder="Agregar experiencia laboral" class="border rounded px-3 py-1 flex-grow" />
+        <button onclick="agregarItem('experiencia')" class="bg-blue-600 text-white px-4 py-1 rounded hover:bg-blue-700">Añadir</button>
+      </div>
+    </section>
+
+    <!-- Formación académica -->
+    <section>
+      <h3>🎓 Formación académica</h3>
+      <ul id="formacion-list">
+        <li>Ingeniería en Sistemas - Universidad Santiago de Cali - 2027 </li>
+        <li>Tecnología en redes de datos - SENA - 2021 </li>
+      </ul>
+      <div class="mt-2 flex gap-2">
+        <input id="nueva-formacion" type="text" placeholder="Agregar formación académica" class="border rounded px-3 py-1 flex-grow" />
+        <button onclick="agregarItem('formacion')" class="bg-blue-600 text-white px-4 py-1 rounded hover:bg-blue-700">Añadir</button>
+      </div>
+    </section>
+
+    <!-- Formación complementaria -->
+    <section>
+      <h3>📚  Formación complementaria</h3>
+      <ul id="complementaria-list">
+        <li>Cisco CCNA 1 Y 2</li>
+        <li>Cisco DevNet</li>
+      </ul>
+      <div class="mt-2 flex gap-2">
+        <input id="nueva-complementaria" type="text" placeholder="Agregar formación complementaria" class="border rounded px-3 py-1 flex-grow" />
+        <button onclick="agregarItem('complementaria')" class="bg-blue-600 text-white px-4 py-1 rounded hover:bg-blue-700">Añadir</button>
+      </div>
     </section>
 
   </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
+
+ 
